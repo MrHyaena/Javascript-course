@@ -24,3 +24,8 @@ const theHobbit = new Book(
 );
 
 console.log(theHobbit.info());
+
+console.log(Book.prototype);
+
+console.log(Object.getPrototypeOf(Book.prototype) === Object.prototype);
+console.log(theHobbit.valueOf());
