@@ -1,13 +1,26 @@
-function Player(name, marker) {
-  this.name = name;
-  this.marker = marker;
-  this.sayName = function () {
-    console.log(this.name);
+function Book(title, author, pages, state) {
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.state = state;
+  this.info = function () {
+    let infoBook =
+      this.title +
+      " by " +
+      this.author +
+      ", " +
+      this.pages +
+      " pages, " +
+      this.state;
+    return infoBook;
   };
 }
 
-const player1 = new Player("steve", "X");
-const player2 = new Player("also steve", "O");
+const theHobbit = new Book(
+  "The Hobbit",
+  "J.R.R. Tolkien",
+  "295",
+  "not read yet"
+);
 
-player1.sayName();
-player2.sayName();
+console.log(theHobbit.info());
